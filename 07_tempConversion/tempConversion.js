@@ -1,15 +1,9 @@
 const convertToCelsius = function (fahrenheitTemperature) {
-  if (fahrenheitTemperature === 32) return 0;
-  let celsiusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
-  celsiusTemperature = (Math.round(celsiusTemperature * 10) / 10).toFixed(1);
-  return parseFloat(celsiusTemperature);
+  return fahrenheitTemperature === 32 ? 0 : Math.round((fahrenheitTemperature - 32) * 5 / 9 * 10) / 10;
 };
 
 const convertToFahrenheit = function (celsiusTemperature) {
-  if (celsiusTemperature === 0) return 32;
-  let fahrenheitTemperature = (celsiusTemperature * 9 / 5) + 32;
-  fahrenheitTemperature = (Math.round(fahrenheitTemperature * 10) / 10).toFixed(1);
-  return parseFloat(fahrenheitTemperature);
+  return celsiusTemperature === 0 ? 32 : Math.round((celsiusTemperature * 9 / 5 + 32) * 10) / 10;
 };
 
 // Do not edit below this line

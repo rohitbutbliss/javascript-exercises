@@ -1,8 +1,5 @@
 const reverseString = function (string) {
-    let newString = "";
-    let origStringLength = string.length;
-    for (let i = origStringLength - 1; i >= 0; i--) newString = newString + string[i];
-    return newString;
+    return string.split("").reverse().join("");
 };
 
 // Do not edit below this line
